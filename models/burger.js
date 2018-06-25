@@ -1,20 +1,19 @@
 var orm = require('../config/orm.js')
 var burger = {
     all: function(cb) {
-      console.log('inside the burger.all function')
-      orm.all("burgers", function(res) {
+      orm.all("c5hcxskh4gew458x", function(res) {
         cb(res);
       });
     },
     create: function(name, cb) {
-      orm.create("burgers", 
+      orm.create("c5hcxskh4gew458x", 
       ['burger_name', 'devoured'],
       [name, false],
       cb)
     },
     update: function(id, cb) {
       var condition = 'id=' +id;
-      orm.update("burgers",{devoured: true}, condition, cb)
+      orm.update("c5hcxskh4gew458x",{devoured: true}, condition, cb)
     }
 };
   
